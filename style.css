@@ -1,0 +1,1503 @@
+@import "shims/reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Gothic+A1:wght@200;300;400;500;600&display=swap');
+
+
+
+
+
+/* Gobal */
+
+
+body>header>.wrapper,
+section#landing header h2,
+section#about,
+section#services div, 
+section#services .services-container,
+section#mb-clients,
+section#clients-lg,
+section#training-offer .blue-banner,
+section#inspection,
+section#camera,
+section#thermography,
+section#refac-testing,
+section#training-main,
+section#recommended,
+section#media,
+section#contact,
+
+
+section#footer {
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+
+a {
+    text-decoration: none;    
+}
+.bg-blue {
+    background-color: #304768;
+    border-bottom: 20px solid #F4782A;
+    padding: 1.5rem 2rem;
+}
+
+.ft-white {
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+span {
+    color: #F4782A;
+}
+
+p {
+   font-family: 'Gothic A1', sans-serif;
+   font-weight: 500;
+   color: #304768;
+}
+
+cite p {
+    color: #fff;
+}
+
+h1,h2,h3,h4 {
+    font-family: 'Bebas Neue', cursive;
+}
+
+.ml {
+    margin-left: 4.5rem !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+body>header {
+   height: 5rem;
+   display: flex;
+   flex-direction: row;
+   position: fixed;
+   left: 0;
+   right: 0;
+   top: 0;
+   background-color: #fff;
+   z-index: 2;
+   /* border-bottom: 2px solid #000; */
+}
+body>header>.wrapper {
+   flex: auto;
+   display: flex;
+   flex-direction: row;
+   align-items: stretch;
+   padding: 0 1rem;
+}
+body>header .brand {
+    flex: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    position: relative;
+    top: 30px;
+}
+.wrapper .brand img {
+    width: 5rem;
+    position: absolute;
+}
+
+/* #js-brand {
+    height: 6rem;
+    width: 10rem;
+    text-indent: -9999px;
+    background-image: url(./img/CHB-Logo.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left center;
+} */
+.nav-links {
+    position: absolute;
+    right: 0px;
+    height: 100vh;
+    top: 0vh;
+    text-align: right;
+    background-color: #2A3A66;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 60%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    opacity: 0;
+    z-index: 88;
+}
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.nav-links a {
+    opacity: 0;
+    list-style: none;
+    margin: -130px 0;
+    /* border-bottom: 3px solid #e4a053; */
+    margin: -500px 0 -80px 50px;
+    max-width: 50%;
+    padding: 20px 0;
+    text-transform: uppercase;
+}
+.burger {
+    display: block;
+    /* margin-top: 40px; */
+    z-index: 99;
+}
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #F4782A;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+.nav-active {
+    transform: translateX(12%);
+    opacity: 1;
+}
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Login Icon */
+/* .nav-links a:nth-child(4):before {
+    content: "";
+    display: block;
+    background-image: url(./images/login.svg);
+    width: 2rem;
+    height: 2rem;
+    padding-right: 1.5rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+} */
+.nav-links a:nth-child(4) {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+body>header nav {
+    flex: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+body>header nav a {
+    padding: 0.5rem;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 0.1rem;
+    border-bottom: 3px solid transparent;
+    border-bottom-color: transparent;
+    transition: border-bottom-color 0.3s ease-out;
+}
+body>header nav a:hover {
+    color: #F4782A;
+}
+
+section#landing {
+    height: 169px;
+    background-color: #304768;
+}
+section#landing header {
+    margin-top: 5rem;
+    height:  200px;
+    /* background-color: green; */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: 260px;
+    background-position: top right;
+
+    padding: 3.5rem 1rem;
+
+}
+section#landing .landing-bg {
+    background-image: url(./img/landing-sm-banner.png);
+}
+section#landing .inspection-bg {
+    background-image: url(./img/inspection-sm-banner.png);
+}
+section#landing .camera-bg {
+    background-image: url(./img/camera-sm.png);
+}
+section#landing .thermography-bg{
+    background-image: url(./img/thermo-sm.png);
+}
+section#landing .testing-main-bg {
+    background-image: url(./img/testing-sm.png);
+}
+section#landing .training-landing {
+    background-image: url(./img/training-sm.png);
+}
+section#landing .media-bg {
+    background-image: url(./img/media-sm.png);
+}
+section#landing .contact-bg {
+    background-image: url(./img/contact-sm.png);
+}
+
+
+
+
+section#landing header h2 {
+    color: #FFF;
+    font-weight: bold;
+    text-transform: uppercase;
+    /* margin-top: 2rem; */
+}
+section#about {
+    padding: 3.5rem 1rem 2rem;
+}
+section#about h2 {
+    text-transform: uppercase;
+    color: #304768;
+    padding-bottom: 0.5rem;
+}
+section#about img {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+
+section#services {
+    background-color: #304768;
+    padding: 2rem 0;
+}
+section#services .blue-strip {
+    background: rgb(255,255,255);
+    /* background: linear-gradient(176deg, rgba(255,255,255,1) 10%, rgba(48,71,104,1) 10%, rgba(48,71,104,1) 90%, rgba(255,255,255,1) 90%); */
+}
+section#services h2 {
+    text-transform: uppercase;
+    color: #fff;
+    margin: 1rem 1rem 2rem;
+}
+section#services .services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0;
+}
+section#services .services-container a {
+    text-decoration: none;
+}
+section#services .services-container a:hover {
+    opacity: 0.5;
+}
+section#services .service-block {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 196px;
+    max-width: 166px;
+    width: 166px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: end;
+}
+section#services .service-block p {
+    padding: 0 0.5rem;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.refractory-bg {
+    background-image: url(./img/ourservices-buttonrefrac-test.png);
+}
+.remote-bg {
+    background-image: url(./img/ourservices-remote.png);
+}
+.testing-bg {
+    background-image: url(./img/ourservicesre-fractesting.png);
+}
+.thermo-bg {
+    background-image: url(./img/ourservices-therm.png);
+}
+.training-bg {
+    background-image: url(./img/ourservices-training.png);
+}
+section#clients-lg div, #clients-lg h2 {
+    display: none;
+}
+section#mb-clients {
+    padding: 2rem 1rem;
+}
+section#mb-clients h2 {
+    text-transform: uppercase;
+    color: #304768;
+}
+section#mb-clients .clients-sm div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section#mb-clients img {
+    width: 12rem;
+    padding: 1rem;
+}
+section#mb-clients .bp-logo, section#mb-clients .qt-logo,
+section#mb-clients .src-logo {
+    width: 8rem;
+}
+
+
+
+section#training-offer {
+    background-color: #304768;
+}
+section#training-offer .training-container {
+    padding: 2rem 1rem;
+}
+section#training-offer h2 {
+    text-transform: uppercase;
+    color: #fff;
+}
+section#training-offer p {
+    color: #fff;
+}
+section#training-offer button {
+    background-color: transparent;
+    border: 1px solid #F4782A;
+    color: #fff;
+    padding: 8px 50px;
+    box-shadow: none;
+}
+section#training-offer button:hover {
+    background-color: #F4782A;
+    border: 1px solid #F4782A;
+    color: #fff;
+    box-shadow: none;
+}
+section#training-offer img {
+    display: none;
+}
+
+section#inspection {
+    padding: 2.5rem 1rem;
+}
+section#inspection h2 {
+    color: #F4782A;
+    margin: 1rem 0;
+}
+
+section#landing .inspection-bg h2, section#landing .contact-bg h2 {
+    padding: 1rem 0;
+}
+
+
+section#inspection  h3 {
+    color: #FFF;
+}
+.roles-container  {
+    display: flex;
+}
+.roles-container img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.roles-container p {
+    margin: 0 0 0 0.5rem;
+    color: #fff;
+}
+/* section#inspection .roles {
+    background-color: #304768;
+    border-bottom: 20px solid #F4782A;
+    padding: 1.25rem;
+} */
+section#inspection .roles div {
+    margin: 1rem 0;
+}
+/* Last div text margin remove */
+section#inspection .roles-container div  {
+    margin: 0;
+}
+section#inspection .roles-container div p  {
+    padding: 0.5rem 0;
+}
+section#inspection .roles-container div p:nth-child(1)  {
+    padding:  0;
+}
+section#inspection .inspection-img  {
+    display: flex;
+    justify-content: space-around;
+}
+section#inspection .inspection-img img {
+    width: 10rem;
+    margin: 1rem 0;
+}
+section#inspection .inspec-lg {
+    display: none;
+}
+
+section#camera {
+    padding: 3rem 1rem 2rem;
+}
+section#camera h2 {
+    padding: 1rem 0;
+    color: #F4782A;
+}
+section#camera img {
+    width: 100%;
+}
+
+section#thermography {
+    padding: 2rem 1rem;
+}
+section#thermography .thermimage-img  {
+    display: flex;
+    justify-content: space-between;
+}
+section#thermography .thermimage-img img {
+    width: 11rem;
+}
+section#thermography .roles {
+    margin-top: 1rem;
+}
+section#thermography .roles h3 {
+    color: #fff;
+    margin: 1rem 0;
+}
+section#thermography .roles-container {
+    display: flex;
+}
+section#thermography .roles div {
+    margin: 1rem 0;
+}
+
+section#refac-testing {
+    padding: 2.5rem 1rem;
+}
+section#refac-testing img {
+    width: 100%;
+}
+
+section#training-main {
+    padding: 2.5rem 1rem;
+}
+section#training-main .testimonials-container {
+    background-color: #2A3A66;
+    border-bottom: 10px solid #F4782A;
+    margin: 3rem 0 4rem;
+    padding: 2rem;
+    text-align: center;
+}
+section#training-main .testimonials-container h4 {
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+section#training-main .heading-course {
+    color: #F4782A;
+    text-transform: lowercase;
+}
+section#training-main  .training-problem h3 {
+    color: #2A3A66;
+}
+.slick-arrow{
+    background-color: transparent;
+    border: none;
+    display: none !important; 
+}
+.slick-arrow:hover{
+    cursor: pointer;
+}
+
+.slick-arrow:focus{
+    outline: none;
+}
+
+.bubble blockquote {
+	position: relative;
+    border: none;
+}
+
+.bubble blockquote h5{
+    padding: 6px 25px 10px;
+    color: #fff;
+    line-height: 150%;
+    font-family: 'Montserrat', helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.bubble blockquote div::before{
+	content: url("../img/quote.png");
+}
+
+.bubble cite{
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    list-style: none;
+    bottom: 40px;
+}
+
+.slick-dots li {
+
+    border-radius: 50%;
+    margin: 0 15px;
+}
+
+.slick-dots button {
+    display: block;
+    position: absolute;
+    bottom: -72px;
+    width: 13px;
+    height: 20px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    color: #2A3A66;
+    background: #2A3A66;
+}
+section#training-main h3 {
+    margin: 4rem 0 2rem;
+}
+section#training-main h3:nth-child(1) {
+    margin-top: 0;
+}
+
+
+section#recommended {
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+}
+section#recommended h3 {
+    color: #FFF;
+    margin-bottom: 2rem;
+}
+section#recommended .roles-container div {
+    margin-bottom: 1rem;
+}
+section#recommended .rec-img {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+section#media {
+    padding: 5rem 1rem 2rem;
+}
+section#media .bottom-space {
+    margin-bottom: 1.5rem;
+}
+section#media > h2 {
+    color: #2A3A66;
+    margin-bottom: 2rem;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+section#media #video iframe {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 0.5rem;
+}
+section#media .roles-container a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 0.5rem;
+}
+section#media .roles-container a:hover {
+   color: #F4782A;
+}
+
+section#media #right-panel-media h2 {
+    margin-top: 4rem;
+    color: #2A3A66;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+
+
+
+
+form .contact-email {
+    display: flex;
+    flex-direction: column;
+}
+
+/* form .contact-email input, textarea  {
+    padding: 10px 0;
+} */
+input[type=email], input[type=text], textarea  {
+    width: 100%;
+    padding: 12px 20px;
+    /* margin: 8px 0; */
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+#submit-contact {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    /* margin-top: 1rem; */
+    padding: 8px 20px;
+    /* border: 2px solid #000; */
+    
+}
+#submit-contact:hover {
+    background-color: transparent;
+    /* border: 2px solid #000; */
+    color: #000;
+    outline: 2px solid #000;
+}
+section#contact {
+    padding: 4rem 1rem 1rem;
+}
+section#contact #container h2 {
+    color: #F4782A;
+}
+section#contact label {
+    /* margin-bottom: 0.5rem; */
+    margin: 0.75rem 0;
+    text-transform: uppercase;
+    color: #304768;
+}
+section#contact input[type=submit] {
+    margin: 1.5rem 0 2rem;
+    width: 100%;
+    background-color: #2A3A66;
+}
+section#contact .contact-deets h4 {
+    margin-bottom: 1.5rem;
+    line-height: 160%;
+
+}
+section#contact .tel h4:nth-child(1) {
+    margin-bottom: 0.5rem;
+}
+section#contact .darrol h4:nth-child(1) {
+    margin-bottom: 0.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+ /* Footer */
+footer {
+    background-color: #304768;
+    margin-top: 2.5rem;
+}
+section#footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    padding: 2rem 1rem;
+}
+section#footer p {
+    color: #fff;
+    /* font-size: 0.75rem; */
+    padding-top: 0.75rem;
+}
+section#footer div {
+    display: flex;
+    flex-direction: column;
+    /* font-size: 0.75rem; */
+}
+section#footer div span {
+    text-transform: uppercase;
+    color: #F4782A;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+section#footer div a {
+    color: #fff;
+    text-decoration: none;
+  
+}
+section#footer div a:nth-child(2) {
+    padding: 0.5rem 0;
+}
+
+
+
+
+
+
+
+/*-----IPAD RESPONSIVE------*/
+@media only screen and (min-width: 760px) {
+
+   
+
+   
+    section#landing {
+        height: 167px;
+
+    }
+    section#landing .landing-bg {
+        background-image: url(./img/landing-banner.png);
+        background-size: contain;
+               
+    }
+    section#landing .inspection-bg {
+        background-image: url(./img/inspection-banner.png);
+        background-size: contain;
+    }
+    section#landing .camera-bg {
+        background-image: url(./img/camera-lg.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    section#landing .thermography-bg{
+        background-image: url(./img/thermo-lg.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    section#landing .testing-main-bg{
+        background-image: url(./img/testing-lg.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    section#landing .training-landing {
+        background-image: url(./img/training-lg.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    section#landing .media-bg {
+        background-image: url(./img/media-lg.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    section#landing .contact-bg {
+        background-image: url(./img/contact-lg.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    
+    
+   
+    
+    section#about {
+        padding: 1rem 1rem 2rem;
+    }
+    section#about .about-container {
+        margin-top: 3rem;
+    }
+    section#about h2 {
+        /* margin-top: 2rem; */
+        padding-bottom:1rem ;
+    }
+    section#about img {
+        display: none;
+    }
+    
+    section#services {
+        margin-bottom: 1rem;
+    }
+
+    section#mb-clients {
+        display: none;
+    }
+    section#clients-lg {
+        padding: 3rem 0 2rem;
+    }
+    #clients-lg h2 {
+        display: block;
+        margin: 0 1rem;
+        color: #2A3A66;
+    }
+    section#clients-lg div {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        align-items: center;
+        justify-content: center;
+    }
+    section#clients-lg img {
+        width: 9rem;
+        margin: 0 auto;
+        padding: 1rem 0;
+    }
+    /* section#clients-lg .chev-logo {
+        width: 8rem;
+    } */
+    section#clients-lg .bp-logo, section#clients-lg .qt-logo {
+        width: 7rem;
+    }
+    section#clients-lg .src-logo,
+    section#clients-lg .oq-logo  {
+        width: 6rem;
+    }
+
+
+    section#training-offer .blue-banner{
+        display: flex;
+        margin-top: 5rem;
+        align-items: center;
+    }
+    section#training-offer img {
+        display: block;
+        overflow: hidden;
+        margin: -1rem 0;   
+    }
+
+
+
+    section#inspection {
+        display: flex;
+        margin-top: 2rem;
+    }
+    section#inspection h2 {
+        margin: 0 0 1rem;
+    }
+    section#inspection div:nth-child(1) {
+        width: 50%;
+    }
+    section#inspection .roles {
+        width: 50%;
+        margin-top: 3rem;
+    }
+
+    section#inspection .inspec-sm {
+        display: none;
+    }
+    section#inspection .inspec-lg {
+        display: block;
+    }
+    section#inspection .inspection-img img {
+        width: 11rem;
+        margin: 1rem 0;
+    }
+
+    section#camera {
+        display: flex;
+    }
+    section#camera h2 {
+        padding: 0;
+    }
+    section#camera div {
+        width: 50%;
+        padding: 0.5rem;
+    }
+    section#camera div:nth-child(2) {
+        margin-top: 2.75rem;
+    }
+    section#camera img {
+        width: 100%;
+    }
+
+    section#thermography {
+        display: flex;
+        margin-top: 3rem;
+    }
+    section#thermography .roles {
+        height: fit-content;
+        margin-top: 0;
+    }
+    section#thermography div:nth-child(1) {
+        padding-right: 1.5rem;
+    }
+    section#thermography .thermo-txt p {
+        width: 85%;
+    }
+    section#thermography .thermimage-img  {
+        justify-content: flex-start;
+        margin-top: 0.5rem;
+    }
+    section#thermography .thermimage-img img:nth-child(1)  {
+        padding-right: 1rem;
+    }
+    section#thermography .thermimage-img img {
+        width: 12.5rem;
+    }
+
+    section#refac-testing {
+        display: flex;
+        margin-top: 2rem;
+    }
+    section#refac-testing p {
+        width: 85%;
+    }
+    section#refac-testing img {
+        width: 20rem;
+    }
+
+
+
+
+
+
+
+    section#training-main {
+        /* display: flex; */
+        margin-top: 2rem;
+
+    }
+    section#training-main .heading-course {
+        color: #F4782A;
+        margin-bottom: 1rem;
+    }
+    section#training-main .testimonials-container {
+        background-color: #2A3A66;
+        border-bottom: 10px solid #F4782A;
+        margin: 3rem 1rem 4rem 0;
+        padding: 2rem;
+        text-align: center;
+    }
+    section#training-main .testimonials-container h3 {
+        color: #fff;
+        margin-bottom: 2rem;
+    }
+    .slick-arrow{
+        background-color: transparent;
+        border: none;
+        display: none !important; 
+    }
+    
+    .slick-arrow:hover{
+        cursor: pointer;
+    }
+    
+    
+    .slick-arrow:focus{
+        outline: none;
+    }
+    
+    .bubble blockquote {
+        position: relative;
+        border: none;
+    }
+    
+    .bubble blockquote h5{
+        padding: 6px 25px 10px;
+        color: #fff;
+        line-height: 150%;
+        font-family: 'Montserrat', helvetica, sans-serif;
+        font-size: 16px;
+    }
+    
+    .bubble blockquote div::before{
+        content: url("../img/quote.png");
+    }
+    
+    .bubble cite{
+        text-align: center;
+        color: #fff;
+        font-weight: bold;
+        font-style: italic;
+    }
+    
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        list-style: none;
+        bottom: 40px;
+    }
+
+    .slick-dots li button { 
+        font-size: 0; 
+     } 
+    
+    .slick-dots li {
+    
+        border-radius: 50%;
+        margin: 0 15px;
+    } 
+    .slick-dots button {
+        display: block;
+        position: absolute;
+        bottom: -72px;
+        width: 13px;
+        height: 13px;
+        padding: 0;
+        border: none;
+        border-radius: 50%;
+        color: #2A3A66;
+        background: #2A3A66;
+    }
+
+
+    section#recommended {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2rem;
+    }
+    section#recommended .recommend-container  {
+
+        width: 50%;
+    }
+    section#recommended .rec-img {
+        width: 24rem;
+        height: 30rem;
+        margin-top: 0;
+    }
+
+
+
+    #all-videos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    section#media #video iframe {
+        padding: 1rem;
+        padding-left: 0;
+    }
+
+
+
+    form .contact-email, form .contact-fname {
+        display: flex;
+        flex-direction: column;
+        margin: 1.5rem 0;
+    }
+    
+    form
+    
+    form .contact-email input {
+        padding: 10px 0;
+        
+    }
+    input[type=email],input[type=text]  {
+        width: 100%;
+    }
+    #submit-contact {
+        background-color: #000;
+        color: #fff;
+        border: none;
+        /* margin-top: 1rem; */
+        padding: 8px 20px;
+    }
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+    section#footer {
+        flex-direction: row;
+
+    }
+    section#footer p {
+        padding-top: 0;
+    }
+    section#footer div {
+        flex-direction: row;
+
+    }
+    section#footer div a:nth-child(2){
+        padding: 0;
+        margin: 0 1rem;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 1200px) {
+    body>header .brand h1 {
+        height: 6rem;
+        width: 10rem;
+        text-indent: -9999px;
+        background-image: url(./img/CHB-Logo.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left center;
+        transition: 0.2s;
+    }
+
+    .wrapper .brand img {
+        display: none;
+    }
+    
+    /* body>header .brand h1 {
+        height: 11.5rem;  
+        width: 10rem;
+        margin-top:5rem;
+    } */
+
+    #js-main {
+        height: 11.5rem;  
+        width: 10rem;
+        margin-top:5rem;
+    }
+    
+    /* #js-brand {
+        height: 11.5rem;  
+        width: 10rem;
+        margin-top:5rem;
+    } */
+
+
+     body > header nav {
+        flex: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+     body > header nav a {
+        padding: 0.5rem;
+        color: #fff;
+        text-decoration: none;
+        letter-spacing: 0.1rem;
+        border-bottom: 3px solid transparent;
+        border-bottom-color: transparent;
+        transition: border-bottom-color 0.3s ease-out;
+      }
+      .nav-links {
+        display: flex;
+        flex-direction: row;
+        position: inherit;
+        width: 100%;
+        height: 20px;
+        top: 0;
+        justify-content: space-around;
+        opacity: 1;
+        transform:translateX(0%);
+        transition: none;
+        background-color: transparent;
+        margin-top: 1rem;
+      }
+      .nav-links a {
+        text-decoration: none;
+        color: #304768;
+        font-weight: 700;
+        font-size: 14px;
+        list-style: none;
+        opacity: 1;
+        margin: 0;
+        border: none;
+        padding: 0 1rem;
+      }
+      .nav-links a:active {
+        color: #F4782A;
+      }
+      /*Remove last links padding */
+      .nav-links a:nth-child(4) {
+        padding: 0;
+      }
+      .burger {
+        display: none;
+        cursor: pointer;
+      }
+
+
+    /* Sinlge line headings */
+
+    section#landing .training-landing h2, section#landing .media-bg h2, section#landing .contact-bg h2 {
+        margin-top: 10rem !important;
+        padding-left: 1rem;
+    }
+
+    section#landing .contact-bg h2  {
+        /* margin-left: 7rem; */
+        margin-top: 10rem;
+    }
+    
+
+ 
+      
+    section#landing {
+        height: 375px; 
+    }
+    section#landing header {
+        height:  448px;
+        background-size: contain;
+        background-size: 850px;
+        padding: 3.5rem 1rem;
+    }
+    section#landing header h2 {
+        font-size: 50px;
+        margin-top: 6rem;
+        padding-left: 1rem;
+    }
+    section#about h2 {
+        font-size: 40px;
+    }
+    section#about img {
+        display: block;
+        width: 500px;
+        height: 650px;
+        margin-right: 3rem;
+    }
+    section#about .about-container {
+        display: flex;
+        flex-direction: row-reverse;
+        margin-top: 6rem;
+    }
+
+    section#inspection {
+        margin-top: 5rem;
+    }
+    section#inspection .inspection-txt  {
+        padding-right: 4rem;
+    
+    }
+    section#landing .inspection-bg h2  {
+        /* margin-top: 10rem; */
+        padding-left: 1rem;
+        font-size: 50px;
+    }
+    section#inspection .inspec-lg {
+        display: flex;
+        justify-content: space-between;
+    }
+    section#inspection .inspection-img img {
+        width: 15rem;
+        margin: 1rem 0;
+    }
+
+    section#camera {
+        padding: 6rem 1rem 2rem;
+    }
+    section#camera h2 {
+        padding: 0 0 1rem;
+    }
+    section#camera div:nth-child(1) {
+        padding: 0 2rem 0 0;
+    }
+    section#camera div:nth-child(2){
+        margin-top: 3.75rem;
+    }
+    section#camera img {
+        width: 34rem;
+    }
+    
+    section#thermography {
+        margin-top: 6rem;
+    }
+    section#landing .thermography-bg h2 {
+        margin-top: 10rem;
+    }
+
+    section#refac-testing {
+        margin-top: 5rem;
+        align-items: center;
+    }
+    section#landing .testing-main-bg {
+        /* margin-top: 9rem; */
+    }
+    section#refac-testing p {
+        width: 85%;
+    }
+    section#refac-testing img {
+        width: 25rem;
+    }
+
+    section#training-main {
+        margin-top: 5rem;
+        display: flex;
+    }
+    section#training-main div:nth-child(1){
+        width: 50%;
+        /* padding-right: 2rem; */
+    }
+    .training-problem {
+        margin-left: 2rem;
+    }
+    section#training-main .training-problem p {
+        margin-bottom: 1rem;
+    }
+    section#training-main .testimonials-container {
+        padding-top: 4.5rem;
+        /* width: 500px; */
+        /* height: 500px; */
+    }
+    .bubble blockquote h5{
+        padding: 6px 25px 10px;
+        font-size: 20px;
+    }
+
+
+
+    section#recommended {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 6rem;
+    }
+    section#recommended .recommend-container  {
+
+        width: 50%;
+    }
+
+    section#recommended .rec-img {
+        width: 35rem;
+        height: 32rem;
+    }
+    section#landing .inspection-bg .rec-heading {
+        margin-top: 9rem;
+    }
+
+
+     section#landing .media-bg {
+        background-image: url(./img/media-lg.png);
+        background-size: 49.25rem;
+    }
+
+    #all-videos {
+        margin-top: -1.25rem;
+    }
+
+    section#media .test {
+        display: flex;
+        margin-top: 2rem;
+    }
+    section#media > h2 {
+        display: none;
+
+    }
+    section#media .recommend-container {
+        width: 220%;
+        height: fit-content;
+        margin-top: 5.5rem;
+    }
+    section#media #right-panel-media h2 {
+        margin-top: 0rem;
+    }
+    section#media #video iframe {
+        margin-bottom: -2rem;
+    }
+    section#media #right-panel-media  {
+        padding: 0 1rem;
+    }
+    section#media #right-panel-media #video  {
+        padding: 0 0.5rem;
+    }
+
+    section#contact {
+        display: flex;
+        margin-top: 4rem;
+    }
+    section#contact #container h2 {
+        font-size: 40px;
+    }
+    section#contact input[type=submit] {
+        width: initial;
+        padding: 0.5rem 3rem;
+
+    }
+    section#contact input[type=submit]:hover {
+        background-color: #fff;
+        color: #F4782A;
+        outline-color: #F4782A;
+
+    }
+    section#contact .contact-deets {
+        margin-top: 9rem;
+        padding: 0 3rem ;
+    }
+    section#contact .contact-deets h4 {
+        font-size: 20px;
+    }
+
+    
+
+    
+    
+}
+
+
+@media only screen and (min-width: 1600px) {
+    section#landing .landing-bg {
+        background-size: 60rem;
+               
+    }
+    section#landing .inspection-bg {
+        background-image: url(./img/inspection-banner.png);
+        background-size: contain;
+    }
+    section#landing .camera-bg {
+        background-image: url(./img/camera-lg.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    section#landing .thermography-bg{
+        background-image: url(./img/thermo-lg.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    section#landing .testing-main-bg{
+        background-image: url(./img/testing-lg.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    section#landing .training-landing {
+        background-image: url(./img/training-lg.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    section#landing .media-bg {
+        background-image: url(./img/media-lg.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+
+
+
+
+
